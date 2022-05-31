@@ -840,6 +840,7 @@ lzain = ` ‎ ‏‏‎‎ ‏‏‎‎ ‏‏‎‎ ‏‏‎‎ ‏‏‎‎ �
 *╟ ❒ ${prefix}poke*
 *╟ ❒ ${prefix}neko*
 *╟ ❒ ${prefix}waifu*
+*╟ ❒ ${prefix}patpat*
 *╟ ❒ ${prefix}avatar*
 *╟ ❒ ${prefix}kanna*
 *╟ ❒ ${prefix}anime*
