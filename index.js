@@ -956,20 +956,20 @@ cnf.sendMessage(from, menwtm, image,{contextInfo: {forwardingScore : 0, isForwar
 addFilter(from)
 break
 
-case prefix+'cum':
+case prefix+'patpat':
 if (isBanned) return  reply(mess.banned)
-      ranp = getRandom('.gif')
-      rano = getRandom('.webp')
-			anu = await axios.get('https://nekos.life/api/v2/img/pat')
-			exec(`wget ${anu.data.url} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-			  fs.unlinkSync(ranp)
-				if (err) return reply('error')
-				buffer = fs.readFileSync(rano)
-				cnf.sendMessage(from, buffer, MessageType.sticker, {quoted: mek})
-				fs.unlinkSync(rano)
-			})
-			addFilter(from)
-          break
+ranp = getRandom('.gif')
+rano = getRandom('.webp')
+anu = await axios.get('https://nekos.life/api/v2/img/pat')
+exec(`wget ${anu.data.url} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+fs.unlinkSync(ranp)
+if (err) return reply('error')
+buffer = fs.readFileSync(rano)
+cnf.sendMessage(from, buffer, MessageType.sticker, {quoted: mek})
+fs.unlinkSync(rano)
+})
+addFilter(from)
+break
 
 case prefix+'spoti':
 if (isBanned) return  reply(mess.banned)
