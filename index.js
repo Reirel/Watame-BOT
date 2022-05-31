@@ -176,7 +176,7 @@ return '```' + string + '```'
 
 async function starts() {
 	const cnf = new WAConnection()
-	cnf.version = [2, 2119, 6]
+	cnf.version = [2, 2143, 3]
 	cnf.logger.level = 'warn'
 	console.log(banner.string)
 	cnf.on('qr', () => {
