@@ -13594,7 +13594,7 @@ case prefix+'play':
 if (isBanned) return  reply(mess.banned)          	  
 if (args.length < 1) return reply('Coloca el enlace de la canción!')
 play = body.slice(6)
-anu = await fetchJson(`https://zenzapis.xyz/downloader/ytplay?apikey=b1eb05ffbf&query=${play}`)
+anu = await fetchJson(`https://zenzapis.xyz/downloader/ytplay?apikey=c9b3628121d4a8adfbff2e11&query=${play}`)
 infomp3 = `❒═════❬ *𝐏𝐋𝐀𝐘* ❭═════╾❒
 ├‣ *Nombre* : 
 ┴
