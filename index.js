@@ -13590,7 +13590,7 @@ cnf.sendMessage(from, infoapi, text,{quoted : freply})
 addFilter(from)
 break
 
-case prefix+'play':
+case prefix+'plzay':
 if (isBanned) return  reply(mess.banned)          	  
 if (args.length < 1) return reply('Coloca el enlace de la canción!')
 playys = args.join(" ")
