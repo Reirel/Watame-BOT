@@ -13595,23 +13595,7 @@ if (isBanned) return  reply(mess.banned)
 if (args.length < 1) return reply('Coloca el enlace de la canción!')
 play = body.slice(6)
 anu = await fetchJson(`https://zenzapis.xyz/downloader/ytplay?apikey=b1eb05ffbf&query=${play}`)
-infomp3 = `❒═════❬ *𝐏𝐋𝐀𝐘* ❭═════╾❒
-├‣ *Nombre* : 
-┴
-${anu.result.title}
-┬
-├‣ *Canal* : 
-┴
-${anu.result.channel}
-┬
-├‣ *Tamaño*
-┴
-${anu.result.size}
-┬
-❒═════════════════╾❒`
-buffer = await getBuffer(anu.result.thumb)
 lagu = await getBuffer(anu.result.getAudio)
-cnf.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3 })
 cnf.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `play.mp3`})
 addFilter(from)
 break
