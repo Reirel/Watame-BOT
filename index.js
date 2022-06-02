@@ -13593,7 +13593,7 @@ break
 case prefix+'play':
 if (isBanned) return  reply(mess.banned)          	  
 if (args.length < 1) return reply('Coloca el enlace de la canción!')
-play = body.slice(6)
+play = args.join(" ")
 anu = await fetchJson(`https://zenzapis.xyz/downloader/ytplay?apikey=b1eb05ffbf&query=${play}`)
 lagu = await getBuffer(anu.result.getAudio)
 cnf.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `play.mp3`})
