@@ -13594,23 +13594,23 @@ case prefix+'play':
 if (isBanned) return  reply(mess.banned)          	  
 if (args.length < 1) return reply('Coloca el enlace de la canción!')
 play = body.slice(6)
-anu = await fetchJson(`https://api.lolhuman.xyz/api/ytplay?apikey=c9b3628121d4a8adfbff2e11&query=${play}`)
+anu = await fetchJson(`https://zenzapis.xyz/downloader/ytplay?apikey=b1eb05ffbf&query=${play}`)
 infomp3 = `❒═════❬ *𝐏𝐋𝐀𝐘* ❭═════╾❒
 ├‣ *Nombre* : 
 ┴
-${anu.result.info.title}
+${anu.result.title}
 ┬
 ├‣ *Canal* : 
 ┴
-${anu.result.info.uploader}
+${anu.result.channel}
 ┬
 ├‣ *Tamaño*
 ┴
-${anu.result.audio.size}
+${anu.result.size}
 ┬
 ❒═════════════════╾❒`
-buffer = await getBuffer(anu.result.info.thumbnail)
-lagu = await getBuffer(anu.result.audio.link)
+buffer = await getBuffer(anu.result.thumb)
+lagu = await getBuffer(anu.result.getAudio)
 cnf.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3 })
 cnf.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `play.mp3`})
 addFilter(from)
