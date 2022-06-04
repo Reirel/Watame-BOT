@@ -13966,7 +13966,7 @@ if (isBanned) return  reply(mess.banned)
 if (!isGroup) return reply(`「 ❗ 」ESTE COMANDO SOLO PUEDE SER USADO EN GRUPOS`)
 const daare =['Te reto a poner en tu info de Whatsapp que te gusta Anuel por 24 horas','Te reto a decirle a tu crush que la amas y pasar captura en el grupo','Te reto a poner en tu estado que buscas pareja','Te reto a poner en tu perfil la foto de tu crush','Te reto a decirle a alguien que te gusta...','Te reto a mandar un audio cantando','Te reto mandar audio diciendo:"yamete kudasai"','Te reto a poner en tu info que te gusta tu vecina(o)','Te reto mandar una foto tuya sin taparte la cara','Te reto a decir que apodo tenias cuando eras un/a niñ@ aun','Te reto a enviar un vídeo bailando','Te reto a enviar el último meme que allas visto','Te reto a enviar tu canción favorita','Te reto a darme los datos de tu tarjeta 🥰','Te reto a decir que te gusta BTS🤧']
 const deer = daare[Math.floor(Math.random() * daare.length)]
-wbw = fs.readFileSync(`./src/4.jpg`)
+wbw = fs.readFileSync(`./src/6.jpg`)
 cnf.sendMessage(from, wbw, image, { quoted: mek, caption: '*Reto 😈*\n\n'+ deer })
 addFilter(from)
 break
