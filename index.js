@@ -13635,9 +13635,9 @@ ${anu.views}
 ┬
 ❒═════════════════╾❒`
 buffer = await getBuffer(anu.thumb)
-buffer1 = await getBuffer(anu.url, {method: 'get'})
+buffer1 = await getBuffer(anu.url)
 cnf.sendMessage(from, buffer, image, { caption: infomp3})
-cnf.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `play2.mp4`, quoted:freply, caption: 'Aquí tienes 💕🦈'})
+cnf.sendMessage(from, buffer1, video, {quoted : freply, caption: 'Aquí tienes 💕🦈'})
 addFilter(from)
 break
 
@@ -13649,7 +13649,7 @@ twiit = args.join(" ")
 twiter = await fetchJson(`https://kocakz.herokuapp.com/api/media/twvid?url=${twiit}`)
 nwtwk = ` Pedido entregado 🕊 `
 buffer = await getBuffer(twiter.getVideo)
-cnf.sendMessage(from, buffer, video, {quoted: freply , caption: nwtwk})
+cnf.sendMessage(from, buffer, video, {quoted: freply, caption: nwtwk})
 break
 
 case prefix+'inst':
