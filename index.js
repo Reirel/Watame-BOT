@@ -13638,7 +13638,6 @@ buffer = await getBuffer(anu.thumb)
 buffer1 = await getBuffer(anu.url)
 cnf.sendMessage(from, buffer, image, { caption: infomp3})
 cnf.sendMessage(from, buffer1, video, {quoted : freply, caption: 'Aquí tienes 💕🦈'})
-addFilter(from)
 break
 
 case prefix+'twitter':
