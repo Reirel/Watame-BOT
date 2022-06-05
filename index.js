@@ -13635,7 +13635,7 @@ ${anu.views}
 ┬
 ❒═════════════════╾❒`
 buffer = await getBuffer(anu.thumb)
-buffer1 = await getBuffer(anu.url)
+buffer1 = await getBuffer(anu.url, {method: 'get'})
 cnf.sendMessage(from, buffer, image, { caption: infomp3})
 cnf.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `play2.mp4`, quoted:freply, caption: 'Aquí tienes 💕🦈'})
 addFilter(from)
