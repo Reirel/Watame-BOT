@@ -13590,12 +13590,11 @@ cnf.sendMessage(from, infoapi, text,{quoted : freply})
 addFilter(from)
 break
 
-case prefix+'plzay':
+case prefix+'play':
 if (isBanned) return  reply(mess.banned)          	  
 if (args.length < 1) return reply('Coloca el enlace de la canción!')
 playys = args.join(" ")
-ytpls = (`https://revita.herokuapp.com/api/yt/playmp3?query=${playys}&apikey=ApiRevita`)
-anu = await fetchJson(ytpls)
+anu = await fetchJson(`https://revita.herokuapp.com/api/yt/playmp3?query=${playys}&apikey=ApiRevita`)
 infomp3 = `❒═════❬ *𝐏𝐋𝐀𝐘* ❭═════╾❒
 ├‣ *Nombre* : 
 ┴
@@ -13620,19 +13619,19 @@ break
 case prefix+'play2':
 if (args.length < 1) return reply('Coloca el enlace del video!')
 play2 = body.slice(6)
-anu = await fetchJson(`https://api.lolhuman.xyz/api/ytplay?apikey=c9b3628121d4a8adfbff2e11&query=${play2}`)
+anu = await fetchJson(`https://revita.herokuapp.com/api/yt/playmp4?query=${playys}&apikey=ApiRevita`)
 infomp3 = `❒═════❬ *𝐏𝐋𝐀𝐘2* ❭═════╾❒
 ├‣ *Nombre* : 
 ┴
-${anu.result.info.title}
+${anu.title}
 ┬
 ├‣ *Canal* : 
 ┴
-${anu.result.info.uploader}
+${anu.channel}
 ┬
-├‣ *Tamaño*
+├‣ *Visitas*
 ┴
-${anu.result.video.size}
+${anu.views}
 ┬
 ❒═════════════════╾❒`
 buffer = await getBuffer(anu.result.info.thumbnail)
