@@ -13594,24 +13594,24 @@ case prefix+'plzay':
 if (isBanned) return  reply(mess.banned)          	  
 if (args.length < 1) return reply('Coloca el enlace de la canción!')
 playys = args.join(" ")
-ytpls = (`https://zenzapis.xyz/downloader/ytplay?apikey=c9b3628121d4a8adfbff2e11&query=${playys}`)
+ytpls = (`https://revita.herokuapp.com/api/yt/playmp3?query=${playys}&apikey=ApiRevita`)
 anu = await fetchJson(ytpls)
 infomp3 = `❒═════❬ *𝐏𝐋𝐀𝐘* ❭═════╾❒
 ├‣ *Nombre* : 
 ┴
-${anu.result.title}
+${anu.title}
 ┬
 ├‣ *Canal* : 
 ┴
-${anu.result.channel}
+${anu.channel}
 ┬
-├‣ *Tamaño*
+├‣ *Visitas*
 ┴
-${anu.result.size}
+${anu.views}
 ┬
 ❒═════════════════╾❒`
-buffer = await getBuffer(anu.result.thumb)
-lagu = await getBuffer(anu.result.getAudio)
+buffer = await getBuffer(anu.thumb)
+lagu = await getBuffer(anu.url)
 cnf.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3 })
 cnf.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `play.mp3`})
 addFilter(from)
