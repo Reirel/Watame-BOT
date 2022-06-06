@@ -13613,7 +13613,6 @@ buffer = await getBuffer(anu.thumb)
 lagu = await getBuffer(anu.url)
 cnf.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3 })
 cnf.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `play.mp3`})
-addFilter(from)
 break
 
 case prefix+'play2':
