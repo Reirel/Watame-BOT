@@ -13636,8 +13636,8 @@ ${anu.views}
 ❒═════════════════╾❒`
 buffer = await getBuffer(anu.thumb)
 buffer1 = await getBuffer(anu.url)
-cnf.sendMessage(from, buffer, image, { caption: infomp3})
-cnf.sendMessage(from, buffer1, video, {quoted : freply, caption: 'Aquí tienes 💕🦈'})
+cnf.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
+cnf.sendMessage(from, buffer1, video, {quocaption: 'Aquí tienes 💕🦈'})
 break
 
 case prefix+'twitter':
