@@ -13619,7 +13619,7 @@ break
 case prefix+'play2':
 if (args.length < 1) return reply('Coloca el enlace del video!')
 play2 = body.slice(6)
-anu = await fetchJson(`https://revita.herokuapp.com/api/yt/playmp4?query=${play2}&apikey=ApiRevita`)
+anu = await fetchJson(`https://yuuapi.herokuapp.com/downloader/play/playmp3?query=${play2}&apikey=BETA`)
 infomp3 = `❒═════❬ *𝐏𝐋𝐀𝐘2* ❭═════╾❒
 ├‣ *Nombre* : 
 ┴
