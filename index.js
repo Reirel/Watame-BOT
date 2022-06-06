@@ -13594,7 +13594,7 @@ case prefix+'play':
 if (isBanned) return  reply(mess.banned)          	  
 if (args.length < 1) return reply('Coloca el enlace de la canción!')
 playys = args.join(" ")
-anu = await fetchJson(`https://api-invibot.herokuapp.com/api/yt/playmp3?query=${play2}&apikey=APIKEY`)
+anu = await fetchJson(`https://api-invibot.herokuapp.com/api/yt/playmp3?query=${playys}&apikey=APIKEY`)
 infomp3 = `❒═════❬ *𝐏𝐋𝐀𝐘* ❭═════╾❒
 ├‣ *Nombre* : 
 ┴
